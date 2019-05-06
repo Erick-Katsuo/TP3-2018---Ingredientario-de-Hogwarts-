@@ -1,0 +1,81 @@
+AIUDA                                                                                                            AIUDA
+
+NOMBRE 
+        ayuda - manual del uso para los comandos en este programa.
+
+IMPLEMENTACION 
+
+        comandos: crear_pocion - actualizar - comprar - ayuda        
+
+        -Primer argumento: ./ingredientario 
+
+        -Segundo argumento: *comando*
+
+        -Tercer argumento: 
+
+                comando: crear_pocion
+
+                         Debe ingresarse como Tercer argumento el ID de la pocion que se desea crear.
+                
+                comando: comprar
+
+                         Debe ingresarse como Tercer argumento la cantidad minima de stock requerido.
+                         [Aclaracion: el tipo de dato que usa este valor es int, para stock minimo de mayor 
+                          valor maximo de este tipo de dato puede ocacionar fallas en el programa(esto es debido 
+                          a quese consideran cantidades de stock razonables para un instituto en un cuatrimestre(?))]
+
+        -Cuarto argumento: Debe ingresarse el nombre del archivo a crearse para realizar sus compras.
+                          [Aclaracion: El tamaño maximo para el nombre del archivo a ingresar es de 50 caracteres :D
+                                       El archivo pensado para este comando es de extension ".txt", no especificar
+                                       la extension del mismo es un caso no evaluado en este programa ]
+        
+
+Descripcion 
+
+        Ligeras indicaciones para implementar los comandos:
+        
+
+        --- Condicion previa para realizar todos los comandos: Se debe poseer de los archivos "ingredientario.txt" y "pociones.dat" ---
+
+
+
+        - "crear_pocion" -> ./ingredientario crear_pocion <id_pocion>
+
+                      Realizara la busqueda de los ingredientes necesarios en el archivo
+                      de nombre "ingredientario.txt" luego de extraer la receta de la pocion requerida
+                      (la cual se identifica por el numero de ID) y en caso de poseer todos los ingredientes
+                      junto a sus cantidades necesarias procedera a crear la pocion. :D 
+                      La pocion creada con exito dara paso a la actualizacion del archivo "uso_diario.dat". :o
+                      [Aclaracion: 
+                       El orden de los ingredientes es de forma ascendente.
+                       Es obviado el echo de que el usuario conoce el ID de la pocion que desea preparar.
+                       En caso de que el archivo "uso_diario.dat" no exista entonces se procedera a crear]
+                      
+
+        - "actualizar" ->   ./ingredientario actualizar
+
+                     Procede a actualizar el archivo "ingredientario.txt" restando el stock usado, la informacion
+                     se encuentra en "uso_diario.dat" por lo tanto tambien hace uso del mismo.
+
+
+        - "comprar"    ->   ./ingredientario comprar <cantidad_minima> <nombre_archivo>
+
+                     Comando que te ayuda a preparar la lista pa'l super, dependiendo de la cantidad minima que
+                     necesites para TODOS los ingredientes. Solo se anotaran los ingredientes que no lleguen a 
+                     la cantidad minima ingresada. (cuidado con los precios D: )
+
+
+        - "ayuda"      ->   ./ingredientario ayuda
+                     
+                     Aiuda.
+
+
+
+
+Mensajes para el usuario
+
+        ojala te funque (?)
+
+        
+
+
